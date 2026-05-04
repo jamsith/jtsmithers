@@ -3,6 +3,40 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --app-bg-image: url("/bg-pattern.jpg");
+}
+
+@font-face {
+  font-family: "Glendale";
+  src: url("/font_pack_nine/Glendale.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blueberry";
+  src: url("/font_pack_nine/BlueberrySans.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rainfall";
+  src: url("/font_pack_nine/RainfallSlanted.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Soulcraft";
+  src: url("/font_pack_nine/Soulcraft.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonumentExtended";
+  src: url("/font_pack_nine/MonumentExtended.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @theme inline {
@@ -12,15 +46,17 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --app-bg-image: url("/bg-pattern-dark.jpg");
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
+  background-image: var(--app-bg-image);
+  background-repeat: repeat;
+  background-position: top left;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Blueberry;
 }
