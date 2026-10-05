@@ -5,8 +5,9 @@ export default function Home() {
 
   const navItems = [
     { href: "/about", label: "About" },
-    { href: "/blog", label: "Blog" },
-    { href: "/component-playground", label: "Components" },
+    // { href: "/blog", label: "Blog" },
+    { href: "/hobbies", label: "Hobbies" },
+    // { href: "/component-playground", label: "Components" },
     { href: "/projects", label: "Projects" },
   ];
 

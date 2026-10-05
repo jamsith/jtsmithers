@@ -1,5 +1,28 @@
 import { Box, Container, Link, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 
+const skillGroups = [
+  {
+    label: "Frontend",
+    items: "React, TypeScript, JavaScript, Remix, React Router, HTML, CSS/SASS, Tailwind, Material UI",
+  },
+  {
+    label: "Testing",
+    items: "Playwright, Cypress, React Testing Library, Jest",
+  },
+  {
+    label: "Tooling",
+    items: "Vite, Rollup, Git, GitHub Actions, LaunchDarkly",
+  },
+  {
+    label: "Mobile",
+    items: "Ionic Capacitor, iOS, Android",
+  },
+  {
+    label: "Product",
+    items: "Agile/Scrum, Jira, PostHog, Lighthouse, Datadog",
+  },
+];
+
 export default function AboutPage() {
   return (
     <Container maxW="5xl" py={{ base: 10, md: 16 }}>
@@ -12,7 +35,8 @@ export default function AboutPage() {
             About
           </Text>
           <Text fontSize={{ base: "lg", md: "xl" }} color="fg.muted" maxW="72ch">
-            A quick overview of who I am, what I care about, and how I like to work.
+            Frontend engineer focused on React and TypeScript, currently growing into
+            full-stack work.
           </Text>
         </Stack>
 
@@ -28,8 +52,13 @@ export default function AboutPage() {
               Bio
             </Text>
             <Text color="fg.muted" lineHeight="tall">
-              Replace this with a short paragraph that’s easy to skim. Aim for 3–5 sentences,
-              start with your current focus, and end with what you’re looking for next.
+              I&apos;m a frontend engineer with 6+ years shipping user-facing products in React
+              and TypeScript. Most recently at Sunstate Equipment, I rewrote a legacy
+              Angular rental app into a Remix and Vite platform, and built shared UI used by
+              both the web app and Ionic Capacitor mobile apps. Before that, I spent five years
+              at Tracer delivering React features, mentoring engineers, and working with Product
+              to turn requirements into usable interfaces. I&apos;m looking for a full-stack role
+              where I can keep that product focus while building real backend skills.
             </Text>
           </Box>
 
@@ -44,9 +73,9 @@ export default function AboutPage() {
               What I value
             </Text>
             <Stack gap={2} color="fg.muted" lineHeight="tall">
-              <Text>Clarity over cleverness.</Text>
-              <Text>Accessible, user-first interfaces.</Text>
-              <Text>Small iterations and fast feedback.</Text>
+              <Text>Clarity with Product and customers before clever implementation.</Text>
+              <Text>Shared components so web and mobile feel like one product.</Text>
+              <Text>Small releases, then proof from tests and real usage.</Text>
             </Stack>
           </Box>
         </SimpleGrid>
@@ -58,13 +87,19 @@ export default function AboutPage() {
           borderRadius="xl"
           p={{ base: 5, md: 6 }}
         >
-          <Text fontSize="xl" fontWeight="bold" mb={2}>
+          <Text fontSize="xl" fontWeight="bold" mb={4}>
             Skills snapshot
           </Text>
-          <Text color="fg.muted" maxW="90ch" lineHeight="tall">
-            Add a quick, grouped list (e.g. Frontend, Backend, Tooling). Keep it scannable and
-            avoid long paragraphs—people skim first and read later.
-          </Text>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={{ base: 4, md: 6 }}>
+            {skillGroups.map((group) => (
+              <Stack key={group.label} gap={1}>
+                <Text fontWeight="bold">{group.label}</Text>
+                <Text color="fg.muted" lineHeight="tall">
+                  {group.items}
+                </Text>
+              </Stack>
+            ))}
+          </SimpleGrid>
         </Box>
 
         <SimpleGrid columns={{ base: 1, md: 3 }} gap={{ base: 6, md: 8 }}>
@@ -78,8 +113,9 @@ export default function AboutPage() {
             <Text fontSize="lg" fontWeight="bold" mb={1}>
               Now
             </Text>
-            <Text color="fg.muted">
-              What you’re learning/building this month.
+            <Text color="fg.muted" lineHeight="tall">
+              Practicing full-stack development, and using agentic coding
+              workflows to move faster without dropping quality.
             </Text>
           </Box>
           <Box
@@ -92,8 +128,9 @@ export default function AboutPage() {
             <Text fontSize="lg" fontWeight="bold" mb={1}>
               Looking for
             </Text>
-            <Text color="fg.muted">
-              Roles, collaborations, or project types you’re excited about.
+            <Text color="fg.muted" lineHeight="tall">
+              A frontend or full-stack software developer role on a product team, remote or in personin the US.
+              Especially customer-facing web or mobile work in React and TypeScript, but open to other technologies.
             </Text>
           </Box>
           <Box
@@ -106,13 +143,22 @@ export default function AboutPage() {
             <Text fontSize="lg" fontWeight="bold" mb={1}>
               Contact
             </Text>
-            <Text color="fg.muted">
-              Add email / socials here (keep it minimal and easy to copy).
-            </Text>
+            <Stack gap={1} lineHeight="tall">
+              <Link href="mailto:jtsmithers@gmail.com" color="fg.muted">
+                jtsmithers@gmail.com
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/jason-smith-8734944b"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="fg.muted"
+              >
+                LinkedIn
+              </Link>
+            </Stack>
           </Box>
         </SimpleGrid>
       </Stack>
     </Container>
   );
 }
-
