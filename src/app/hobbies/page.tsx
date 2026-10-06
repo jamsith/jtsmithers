@@ -117,7 +117,7 @@ const hobbies: Hobby[] = [
         numeral: "iii",
         title: "Hockey",
         paragraphs: [
-            "Inline hockey. Would've gone pro if it weren't for these dang knees... and maybe the fact that professional ice hockey isn't really a thing anymore.",
+            "Inline hockey. Would've gone pro if it weren't for these dang knees... and maybe the fact that professional inline hockey isn't really a career path.",
         ],
         columns: { base: 1, md: 2, lg: 2 },
         photos: [
@@ -161,6 +161,7 @@ function PhotoMasonry({
                     lineHeight="0"
                     display="inline-block"
                     w="full"
+                    maxW="100%"
                 >
                     <Image
                         src={photo.src}
@@ -217,8 +218,13 @@ export default function HobbiesPage() {
                         gap={{ base: 5, md: 6 }}
                         scrollMarginTop="2rem"
                     >
-                        <Stack direction="row" align="center" gap={4}>
-                            <Text fontSize={{ base: "3xl", md: "4xl" }} fontWeight="bold">
+                        <Stack direction="row" align="center" gap={{ base: 3, md: 4 }} w="full">
+                            <Text
+                                fontSize={{ base: "2xl", md: "4xl" }}
+                                fontWeight="bold"
+                                lineHeight="1.1"
+                                flexShrink={0}
+                            >
                                 {hobby.title}
                             </Text>
                             <Box

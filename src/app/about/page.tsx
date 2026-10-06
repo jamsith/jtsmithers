@@ -102,7 +102,7 @@ export default function AboutPage() {
           </SimpleGrid>
         </Box>
 
-        <SimpleGrid columns={{ base: 1, md: 3 }} gap={{ base: 6, md: 8 }}>
+        <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} gap={{ base: 6, md: 8 }}>
           <Box
             bg="bg.emphasized"
             borderWidth="1px"
