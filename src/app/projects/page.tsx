@@ -66,7 +66,7 @@ export default function ProjectsPage() {
             Projects
           </Text>
           <Text fontSize={{ base: "lg", md: "xl" }} color="fg.muted" maxW="80ch">
-            A curated set of work with clear goals, constraints, and outcomes.
+            Free time endeavors.
           </Text>
         </Stack>
 
@@ -132,7 +132,7 @@ export default function ProjectsPage() {
             ))}
         </Stack>
 
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={{ base: 6, md: 8 }}>
+        {/* <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={{ base: 6, md: 8 }}>
           {projects
             .filter((p) => !p.images?.length)
             .map((p) => (
@@ -169,9 +169,9 @@ export default function ProjectsPage() {
                 </Stack>
               </Box>
             ))}
-        </SimpleGrid>
+        </SimpleGrid> */}
 
-        <Box
+        {/* <Box
           bg="bg.emphasized"
           borderWidth="1px"
           borderColor="border"
@@ -186,7 +186,7 @@ export default function ProjectsPage() {
             <Text>Prioritize screenshots, short demos, and concrete outcomes.</Text>
             <Text>Include “what I’d improve next” to show iteration mindset.</Text>
           </Stack>
-        </Box>
+        </Box> */}
       </Stack>
     </Container>
   );
